@@ -5,6 +5,3 @@ dependencies:
   - plotly
   - scipy
   - streamlit
-  - streamlit-lottie
-  - streamlit-extras
-  - scipydirect

@@ -42,7 +42,6 @@ def select_slider_generate(slider_name, config_dict, key_):
     )
 
 
-@st.cache_data
 def generate_df(df_list, column_names):
     df = pd.DataFrame(df_list, columns=column_names)
     return df
@@ -59,7 +58,6 @@ def initial_input_dict(dict_name):
 
 
 # functions
-@st.cache_data
 def load_lottie_json(json_file):
     # Opening JSON file
     f = open(json_file, encoding="utf8")

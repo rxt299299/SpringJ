@@ -1,0 +1,148 @@
+/* Slider styles */
+/*
+.stSlider {
+  background-color: lightgray;
+  border: 1px solid gray;
+}
+
+.stSlider .stSlider-rail {
+  height: 5px;
+  background-color: blue;
+}
+
+.stSlider .stSlider-track {
+  background-color: blue;
+}
+
+.stSlider .stSlider-handle {
+  width: 16px;
+  height: 16px;
+  background-color: blue;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.stSlider .stSlider-focused .stSlider-handle {
+  box-shadow: 0 0 5px blue;
+}
+
+/* Selectbox styles */
+/*
+.stSelectbox {
+  background-color: lightgray;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.stSelectbox select {
+  background-color: transparent;
+  color: blue;
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+}
+*/
+/* Button styles */
+/*
+.stButton {
+  background-color: rgb(188, 96, 78);
+  color: rgb(22, 20, 20);
+  border: none;
+  border-radius: 10px;
+  padding: 8px 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.stButton:hover {
+  background-color: rgb(96, 105, 108);
+}
+*/
+
+/* # CSS to inject contained in a string*/
+thead tr th:first-child {display:none}
+tbody th {display:none}
+
+/* CSS */
+.stButton {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fa6400;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #951d1d;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.stButton:hover,
+.stButton:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.stButton:hover {
+  transform: translateY(-1px);
+}
+
+.stButton:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+
+.stTable {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.stTable thead tr {
+  background-color: #232c6f;
+  color: #ffffff;
+  text-align: left;
+}
+
+.stTable th,
+.stTable td {
+    padding: 12px 15px;
+}
+
+.stTable tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.stTable tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.stTable tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.stTable tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}

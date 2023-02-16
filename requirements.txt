@@ -4,3 +4,4 @@ streamlit-lottie==0.0.3
 streamlit-extras==0.2.6
 scipydirect==1.1
 pandas==1.5.3
+numpy==1.24.1

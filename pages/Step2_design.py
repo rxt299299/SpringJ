@@ -50,7 +50,10 @@ design_mappings = {
 }
 
 
-st.title("SpringJ: Optimal Helical Compression Srping Design")
+st.title("Optimal Helical Compression Srping Design")
+st.sidebar.header("SpringJ")
+st.sidebar.image("images/logo.png", use_column_width=True)
+
 # Header layout
 col_start1, col_start2, col_start3, col_start4, col_start5 = st.columns(
     header_layout_range
@@ -271,6 +274,6 @@ if Review:
         st.table(df)
 
 if Next:
-    switch_page("Step3_constraints_num")
+    switch_page("Step3_constraints")
 if Clear_Parameters:
     st.session_state["design_variables_range"] = {}

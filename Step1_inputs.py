@@ -10,7 +10,10 @@ from stutils import *
 from stconstant import *
 from streamlit_extras.switch_page_button import switch_page
 
-st.title("SpringJ: Optimal Helical Compression Srping Design")
+st.title("Optimal Helical Compression Srping Design")
+st.sidebar.header("SpringJ")
+st.sidebar.image("images/logo.png", use_column_width=True)
+
 
 #####################################
 ##########Initialize#################
@@ -214,6 +217,6 @@ if Review:
         df = generate_df(df_list, ("parameter", "value"))
         st.table(df)
 if Next:
-    switch_page("Step2_design_num")
+    switch_page("Step2_design")
 if Clear_Parameters:
     st.session_state["input_dict"] = {}

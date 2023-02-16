@@ -1,7 +1,0 @@
-name: spingj
-dependencies:
-  - pandas
-  - numpy
-  - plotly
-  - scipy
-  - streamlit

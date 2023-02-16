@@ -12,7 +12,7 @@ from streamlit_extras.switch_page_button import switch_page
 
 
 from SpringDesign.spring_design import *
-from Scipydirect.scipydirect import minimize
+from Scipydirect import minimize
 import plotly.express as px
 import pandas as pd
 import time

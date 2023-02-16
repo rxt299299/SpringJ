@@ -99,6 +99,7 @@ if len(feasible_arr)>0:
 
             res = minimize(sping_1.ConstraintsForOptimize, bounds=bounds)
             df = pd.DataFrame(zip(list(bounds_inputs.keys()), res.x), columns=['variable', 'optimal_value'])
+            #df = pd.DataFrame(zip(list(bounds_inputs.keys()), [22, 1.5, 9]), columns=['variable', 'optimal_value'])
             st.table(df)
         with col_res3:
             st_lottie(well_done_fig, height=120, key="well_done")#well_done_fig

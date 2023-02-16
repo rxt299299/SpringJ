@@ -5,3 +5,4 @@ scipy==1.10.0
 streamlit==1.17.0
 streamlit-lottie==0.0.3
 streamlit-extras==0.2.6
+scipydirect==1.4

@@ -1,0 +1,6 @@
+Material Type,Poisson's Ratio,Elastic Modulus (GPa),Shear Modulus (GPa),Reference
+General Aluminum Alloy (e.g. 1000 series),0.33,68.9,25.5,"high purity, excellent ductility and plasticity, but low strength."
+Aluminum-Manganese Alloy (e.g. 3000 series),0.33,69,25.6,"higher strength and corrosion resistance, but relatively poor plasticity."
+Aluminum-Silicon Alloy (e.g. 4000 series),0.33,73.1,27.1,"higher wear resistance and corrosion resistance, but lower strength and plasticity."
+Aluminum-Copper Alloy (e.g. 2000 series),0.33,72.4,26.9,"higher strength and hardness, but relatively poor ductility and plasticity."
+Aluminum-Zinc Alloy (e.g. 7000 series),0.33,71.7,26.6,"extremely high strength and hardness, but relatively low plasticity and difficult to process."

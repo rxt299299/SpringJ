@@ -75,15 +75,11 @@ with st.container():
     with col1:
         if diameter_options is not None:
             Diameter_design_option = st.selectbox(
-                "Wire/Inner/Outer Diameter",
-                diameter_options,
+                "Wire/Inner/Outer Diameter", diameter_options,
             )
             blank1()
         if coils_options is not None:
-            Coils_design_option = st.selectbox(
-                "Total & Active Coils",
-                coils_options,
-            )
+            Coils_design_option = st.selectbox("Total & Active Coils", coils_options,)
             blank1()
 
         multi_selects = [
@@ -95,7 +91,6 @@ with st.container():
         other_options = st.multiselect(
             "Select more design variables", multi_options, []
         )
-    
 
     if diameter_options is not None:
         # Wire/Inner/Outer Diameter
@@ -140,8 +135,8 @@ with st.container():
                 )
             with col2_2:
                 end_d_w = number_input_end_generate(
-                        "Wire Diameter Range", design_constant_input_num, "d_w"
-                    )
+                    "Wire Diameter Range", design_constant_input_num, "d_w"
+                )
                 end_d_i = number_input_end_generate(
                     "Inner Diameter Range", design_constant_input_num, "d_i"
                 )
@@ -162,7 +157,7 @@ with st.container():
                 )
                 end_d_o = number_input_end_generate(
                     "Outer Diameter Range", design_constant_input_num, "d_o"
-                )             
+                )
                 design_variables_range["d_w"] = [start_d_w, end_d_w]
                 design_variables_range["d_o"] = [start_d_o, end_d_o]
         elif Diameter_design_option == "Inner & Outer":
@@ -188,22 +183,22 @@ with st.container():
         if Coils_design_option == "Total Coils":
             with col2_1:
                 start_N_t = number_input_start_generate(
-                        "Total Coils Range", design_constant_input_num, "N_t"
-                    )
+                    "Total Coils Range", design_constant_input_num, "N_t"
+                )
             with col2_2:
                 end_N_t = number_input_end_generate(
-                        "Total Coils Range", design_constant_input_num, "N_t"
-                    )
+                    "Total Coils Range", design_constant_input_num, "N_t"
+                )
                 design_variables_range["N_t"] = [start_N_t, end_N_t]
         elif Coils_design_option == "Active Coils":
             with col2_1:
                 start_N_a = number_input_start_generate(
-                        "Active Coils Range", design_constant_input_num, "N_a"
-                    )
+                    "Active Coils Range", design_constant_input_num, "N_a"
+                )
             with col2_2:
                 end_N_a = number_input_end_generate(
-                        "Active Coils Range", design_constant_input_num, "N_a"
-                    )
+                    "Active Coils Range", design_constant_input_num, "N_a"
+                )
 
                 design_variables_range["N_a"] = [start_N_a, end_N_a]
 
@@ -214,8 +209,8 @@ with st.container():
             )
         with col2_2:
             end_L_free = number_input_end_generate(
-                        "Free Length Range", design_constant_input_num, "L_free"
-                    )
+                "Free Length Range", design_constant_input_num, "L_free"
+            )
 
             design_variables_range["L_free"] = [start_L_free, end_L_free]
     if "Open Length" in other_options:
@@ -226,8 +221,8 @@ with st.container():
             )
         with col2_2:
             end_L_open = number_input_end_generate(
-                        "Open Length Range", design_constant_input_num, "L_open"
-                    )
+                "Open Length Range", design_constant_input_num, "L_open"
+            )
 
             design_variables_range["L_open"] = [start_L_open, end_L_open]
     if "Hard Length" in other_options:
@@ -237,8 +232,8 @@ with st.container():
             )
         with col2_2:
             end_L_hard = number_input_end_generate(
-                        "Hard Length Range", design_constant_input_num, "L_hard"
-                    )
+                "Hard Length Range", design_constant_input_num, "L_hard"
+            )
             design_variables_range["L_hard"] = [start_L_hard, end_L_hard]
     if "Shear Modulus" in other_options:
         with col2_1:
@@ -247,8 +242,8 @@ with st.container():
             )
         with col2_2:
             end_G = number_input_end_generate(
-                        "Shear Modulus Range", design_constant_input_num, "G"
-                    )
+                "Shear Modulus Range", design_constant_input_num, "G"
+            )
             design_variables_range["G"] = [start_G, end_G]
 
 

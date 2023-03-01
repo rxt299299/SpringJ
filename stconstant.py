@@ -122,3 +122,5 @@ constraint_constant = {
     "PreloadForce": (0, 130, 25),
     "BucklingSlendernessRatio": (0, 130, 25),
 }
+
+objective_options = ("Please select", "SpringRate", "SpringIndex", "SpringRateAndIndex")

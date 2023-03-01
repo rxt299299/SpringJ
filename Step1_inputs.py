@@ -68,12 +68,7 @@ with st.container():
         )
         blank1()
         Coils_input_option = st.selectbox(
-            "Total/Active Coils",
-            (
-                "No Input",
-                "Total Coils",
-                "Active Coils",
-            ),
+            "Total/Active Coils", ("No Input", "Total Coils", "Active Coils",),
         )
 
         if Diameter_input_option == "No Input":
@@ -122,7 +117,9 @@ with st.container():
         if Coils_input_option == "No Input":
             pass
         elif Coils_input_option == "Total Coils":
-            input_total_coils = numer_input_generate("Total Coils", inputs_constant, "N_t")
+            input_total_coils = numer_input_generate(
+                "Total Coils", inputs_constant, "N_t"
+            )
             input_dict["N_t"] = input_total_coils
 
             if input_end_closed:
@@ -131,7 +128,9 @@ with st.container():
                 input_dict["N_a"] = input_dict["N_t"] - 1
 
         elif Coils_input_option == "Active Coils":
-            input_active_coils = numer_input_generate("Active Coils", inputs_constant, "N_a")
+            input_active_coils = numer_input_generate(
+                "Active Coils", inputs_constant, "N_a"
+            )
             input_dict["N_a"] = input_active_coils
 
             if input_end_closed:

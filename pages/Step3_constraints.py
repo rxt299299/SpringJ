@@ -55,10 +55,7 @@ with st.container():
         blank1()
     with col2:
         if checkbox_d_o:
-            d_o_design_option = st.selectbox(
-                "Outer Diameter",
-                MaxOrMin,
-            )
+            d_o_design_option = st.selectbox("Outer Diameter", MaxOrMin,)
     with col3:
         if checkbox_d_o and d_o_design_option == "Max":
 
@@ -79,10 +76,7 @@ with st.container():
         blank1()
     with col2:
         if checkbox_d_i:
-            d_i_design_option = st.selectbox(
-                "Inner Diameter",
-                MaxOrMin,
-            )
+            d_i_design_option = st.selectbox("Inner Diameter", MaxOrMin,)
     with col3:
         if checkbox_d_i:
             if d_i_design_option == "Max":
@@ -105,8 +99,7 @@ with st.container():
     with col2:
         if checkbox_maximum_shear_stress:
             maximum_shear_stress_design_option = st.selectbox(
-                "Maximum Shear Stress",
-                MaxOrMin,
+                "Maximum Shear Stress", MaxOrMin,
             )
     with col3:
         if checkbox_maximum_shear_stress:
@@ -136,10 +129,7 @@ with st.container():
         blank1()
     with col2:
         if checkbox_coil_binding_gap:
-            coil_binding_gap_design_option = st.selectbox(
-                "Coil Binding Gap",
-                MaxOrMin,
-            )
+            coil_binding_gap_design_option = st.selectbox("Coil Binding Gap", MaxOrMin,)
     with col3:
         if checkbox_coil_binding_gap:
             if coil_binding_gap_design_option == "Max":
@@ -160,10 +150,7 @@ with st.container():
         blank1()
     with col2:
         if checkbox_spring_rate:
-            spring_rate_design_option = st.selectbox(
-                "Spring Rate",
-                MaxOrMin,
-            )
+            spring_rate_design_option = st.selectbox("Spring Rate", MaxOrMin,)
     with col3:
         if checkbox_spring_rate:
             if spring_rate_design_option == "Max":
@@ -185,10 +172,7 @@ with st.container():
         blank1()
     with col2:
         if checkbox_spring_index:
-            spring_index_design_option = st.selectbox(
-                "Spring Index",
-                MaxOrMin,
-            )
+            spring_index_design_option = st.selectbox("Spring Index", MaxOrMin,)
     with col3:
         if checkbox_spring_index:
             if spring_index_design_option == "Max":
@@ -210,8 +194,7 @@ with st.container():
     with col2:
         if checkbox_diametral_expansion:
             diametral_expansion_design_option = st.selectbox(
-                "Diametral Expansion",
-                MaxOrMin,
+                "Diametral Expansion", MaxOrMin,
             )
     with col3:
         if checkbox_diametral_expansion:
@@ -240,8 +223,7 @@ with st.container():
     with col2:
         if checkbox_stress_relaxation:
             stress_relaxation_design_option = st.selectbox(
-                "Stress Relaxation",
-                MaxOrMin,
+                "Stress Relaxation", MaxOrMin,
             )
     with col3:
         if checkbox_stress_relaxation:
@@ -264,10 +246,7 @@ with st.container():
         blank1()
     with col2:
         if checkbox_preload_force:
-            preload_force_design_option = st.selectbox(
-                "Preload Force",
-                MaxOrMin,
-            )
+            preload_force_design_option = st.selectbox("Preload Force", MaxOrMin,)
     with col3:
         if checkbox_preload_force:
             if preload_force_design_option == "Max":
@@ -289,8 +268,7 @@ with st.container():
     with col2:
         if checkbox_buckling_slenderness_ratio:
             buckling_slenderness_ratio_design_option = st.selectbox(
-                "Buckling Slenderness Ratio",
-                MaxOrMin,
+                "Buckling Slenderness Ratio", MaxOrMin,
             )
     with col3:
         if checkbox_buckling_slenderness_ratio:

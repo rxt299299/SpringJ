@@ -47,6 +47,8 @@ constraints_parameter_names = [
 
 optimize_parameter_name = [
     "spring_rate_spring_index",  # 0.5*(k/k_max)+0.5*(c/c_max)
+    "spring_rate",
+    "spring_index",
 ]
 
 input_parameter_names_range_above0 = [
@@ -134,18 +136,8 @@ Constraint_input_dict = {
 }
 
 InnerOuterDiam_paras_combinations = {
-    "d_o": [
-        ["d_i", "d_w"],
-        ["d_i", "d_w"],
-        ["d_i", "d_w"],
-        ["d_o"],
-    ],
-    "d_i": [
-        ["d_o", "d_w"],
-        ["d_o", "d_w"],
-        ["d_o", "d_w"],
-        ["d_i"],
-    ],
+    "d_o": [["d_i", "d_w"], ["d_i", "d_w"], ["d_i", "d_w"], ["d_o"],],
+    "d_i": [["d_o", "d_w"], ["d_o", "d_w"], ["d_o", "d_w"], ["d_i"],],
 }
 
 MaxShearStress_paras_combinations = [

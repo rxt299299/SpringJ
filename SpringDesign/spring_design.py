@@ -406,7 +406,7 @@ class Spring:
         lower_bounds = [item[0] for item in bounds_inputs.values()]
         upper_bounds = [item[1] for item in bounds_inputs.values()]
         feasible_arr = qmc.scale(sample, lower_bounds, upper_bounds)
-        #这个function会save每一步的feasible_arr，并储存，用于UI画图使用
+        # 这个function会save每一步的feasible_arr，并储存，用于UI画图使用
         feasible_arr_steps = []
         for constraint in self.constraint_policy.keys():
             if constraint in (
@@ -634,6 +634,8 @@ class Spring:
 
         for objective_ in self.objective.keys():
             if objective_ == "spring_rate_spring_index":
+                #self.objective[objective_]
+                #{'MaxorMin':'min', 'k_max': 20, 'c_max':10}
                 spring_rate = optimize_SpringRate(
                     design_value,
                     self.notNone_input_parameters,
@@ -650,7 +652,27 @@ class Spring:
                     0,  # 这个值不用，随便输入一个
                     "target",
                 )
-                target_sum += 0.5 * spring_rate + 0.5 * sping_index
+                target_sum += spring_rate/self.objective[objective_]['k_max'] + sping_index//self.objective[objective_]['c_max']
+            elif objective_ == "spring_rate":
+                spring_rate = optimize_SpringRate(
+                    design_value,
+                    self.notNone_input_parameters,
+                    self.bound_paras,
+                    True,  # 这个值不用，随便输入一个
+                    0,  # 这个值不用，随便输入一个
+                    "target",
+                )
+                target_sum += spring_rate
+            elif objective_ == "spring_index":
+                spring_index = optimize_SpringIndex(
+                    design_value,
+                    self.notNone_input_parameters,
+                    self.bound_paras,
+                    True,  # 这个值不用，随便输入一个
+                    0,  # 这个值不用，随便输入一个
+                    "target",
+                )
+                target_sum += spring_index
 
         for constraint_ in constraints:
             if constraint_ < 0:

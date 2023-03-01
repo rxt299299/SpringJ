@@ -13,7 +13,7 @@ def MaximumShearStress_calculation(MaximumShearStress_paradict):
     component1 = G * (L_free - L_hard)
     component2 = 4 * math.pi * N_a
 
-    component3 = d_w * (4 * d_i**2 + 9.46 * d_w * d_i + 3 * d_w * d_w)
+    component3 = d_w * (4 * d_i ** 2 + 9.46 * d_w * d_i + 3 * d_w * d_w)
     component4 = d_i * (d_i + d_w) ** 3
 
     return component1 * component3 / (component2 * component4)
@@ -35,7 +35,7 @@ def SpringRate_calculation(SpringRate_paradict):
     d_w = SpringRate_paradict["d_w"]  # 线径
     d_i = SpringRate_paradict["d_i"]  # 内径
 
-    return (G * (d_w**4)) / (8 * N_a * (d_i + d_w) ** 3)
+    return (G * (d_w ** 4)) / (8 * N_a * (d_i + d_w) ** 3)
 
 
 # 弹簧指数Spring Index公式
@@ -68,7 +68,7 @@ def DiametralExpansion_calculation(DiametralExpansion_paradict):
     N_a = DiametralExpansion_paradict["N_a"]
     pitch = SpringPitch_formula(True, L_free, d_w, N_a)  # 仅封闭条件下弹簧的直径膨胀
 
-    return d_w + math.sqrt((d_i + d_w) ** 2 + (pitch**2 - d_w) / (math.pi) ** 2)
+    return d_w + math.sqrt((d_i + d_w) ** 2 + (pitch ** 2 - d_w) / (math.pi) ** 2)
 
 
 # Spring Pitch，弹簧间距计算公式
@@ -94,11 +94,11 @@ def StressRelaxation_calculation(StressRelaxation_paradict):
     theta_component_1 = (d_i + d_w) ** 2
     theta = (2 * deflection) / (math.pi * N_a * theta_component_1)
 
-    component_1 = 4 / (Gsr * theta * d_w**4)
-    component_2 = (NB_c / NB_k) * Gsr * NB_n * (time_stress_Relaxation**NB_k)
+    component_1 = 4 / (Gsr * theta * d_w ** 4)
+    component_2 = (NB_c / NB_k) * Gsr * NB_n * (time_stress_Relaxation ** NB_k)
 
     def integrate_com(x):
-        return (x**2) * ((Gsr * theta * x) ** (-NB_n) + component_2) ** (-1 / NB_n)
+        return (x ** 2) * ((Gsr * theta * x) ** (-NB_n) + component_2) ** (-1 / NB_n)
 
     integrate_value = integrate.quad(lambda x: integrate_com(x), 0, d_w)[0]
 
@@ -114,4 +114,4 @@ def PreloadForce_calculation(PreloadForce_paradict):
     d_w = PreloadForce_paradict["d_w"]
     d_i = PreloadForce_paradict["d_i"]
 
-    return (L_free - L_solid) * G * d_w**4 / (8 * N_a * (d_i + d_w) ** 3)
+    return (L_free - L_solid) * G * d_w ** 4 / (8 * N_a * (d_i + d_w) ** 3)

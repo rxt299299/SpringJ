@@ -165,11 +165,7 @@ def constraint_InnerOuterDiamMaxMin(
 
 # 最大剪应力 Maximum Shear Stress, 即最大剪应力最大不超过，或者最小要大于
 def constraint_MaximumShearStressMaxMin(
-    feasible_arr,
-    bound_paras,
-    notNone_input_parameters,
-    if_Max,
-    Threshold,
+    feasible_arr, bound_paras, notNone_input_parameters, if_Max, Threshold,
 ):
     MaxShearStress_miss_paras_combinations, input_paras = constraint_firstStepCheck(
         notNone_input_parameters,

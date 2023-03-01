@@ -3,26 +3,37 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+
 def numer_input_generate(show_name, config_dict, key_):
-    return st.number_input(show_name, 
-    min_value=config_dict[key_][0], max_value=config_dict[key_][1], value=config_dict[key_][2])
+    return st.number_input(
+        show_name,
+        min_value=config_dict[key_][0],
+        max_value=config_dict[key_][1],
+        value=config_dict[key_][2],
+    )
 
 
 def number_input_start_generate(show_name, config_dict, key_):
-    start_ = st.number_input(show_name+' Start', 
-                                min_value=config_dict[key_]["options"][0], 
-                                max_value=config_dict[key_]["options"][1], 
-                                value=config_dict[key_]["value"][0])
+    start_ = st.number_input(
+        show_name + " Start",
+        min_value=config_dict[key_]["options"][0],
+        max_value=config_dict[key_]["options"][1],
+        value=config_dict[key_]["value"][0],
+    )
 
     return start_
 
+
 def number_input_end_generate(show_name, config_dict, key_):
-    end_ = st.number_input(show_name+' End', 
-                                min_value=config_dict[key_]["options"][0], 
-                                max_value=config_dict[key_]["options"][1], 
-                                value=config_dict[key_]["value"][1])
+    end_ = st.number_input(
+        show_name + " End",
+        min_value=config_dict[key_]["options"][0],
+        max_value=config_dict[key_]["options"][1],
+        value=config_dict[key_]["value"][1],
+    )
 
     return end_
+
 
 def slider_generate(show_name, config_dict, key_):
     return st.slider(
@@ -143,7 +154,7 @@ def scatter_plot(idx, feasible_arr_steps, bounds_inputs):
     constraint_name, feasible_arr = feasible_arr_steps[idx]
     feasible_arr = pd.DataFrame(feasible_arr, columns=list(bounds_inputs.keys()))
 
-    if len(bounds_inputs.keys())>=3:
+    if len(bounds_inputs.keys()) >= 3:
         top3_keys = list(bounds_inputs.keys())[:3]
 
         feasible_arr = feasible_arr[top3_keys]
@@ -156,7 +167,7 @@ def scatter_plot(idx, feasible_arr_steps, bounds_inputs):
             opacity=0.4,
             size_max=5,
         )
-    elif len(bounds_inputs.keys())==2:
+    elif len(bounds_inputs.keys()) == 2:
         top2_keys = list(bounds_inputs.keys())[:2]
 
         feasible_arr = feasible_arr[top2_keys]
@@ -166,11 +177,13 @@ def scatter_plot(idx, feasible_arr_steps, bounds_inputs):
             y=top2_keys[1],
             title=constraint_name,
             opacity=0.4,
-            size_max=5,)
+            size_max=5,
+        )
     else:
-        return None   
+        return None
 
     return fig
+
 
 """
 #各个input的输入例子

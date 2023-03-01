@@ -103,6 +103,8 @@ else:
                                 max_value=1.0,
                                 value=0.333,
                                 )
+            
+                check_agree = st.checkbox('I agree to THIS SpringRateWeight and continue')
     
                 objective = {"spring_rate_spring_index": {"MaxorMin": "min", "k_max": (1-springRateWeight)/springRateWeight, "c_max": 1}}
         elif objective_option == 'SpringRate':
@@ -110,7 +112,7 @@ else:
         elif objective_option == 'SpringIndex':
             objective = {"spring_index": {"MaxorMin": "min"}}
 
-    if objective_option != 'Please select':
+    if objective_option in ('SpringRate', 'SpringIndex') or (objective_option == 'SpringRateAndIndex' and check_agree == True):
         # set the spring class
         sping_1 = Spring(input_dict, constraint_policy, objective)
 

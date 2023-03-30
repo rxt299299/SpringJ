@@ -1,4 +1,13 @@
 # SpringJ
+
+<br>
+<br>
+<div align="center">
+  <img src="images/logo.png", width=200>
+</div>
+<br>
+<br>
+<br>
 SpringJ is a tool for designing optimal helical compression springs. Helical compression springs are one of the most commonly used mechanical components, found in automobiles, homes, fitness equipment, and widely used in industrial settings. The performance of the spring directly affects the working state of the machine it is in, impacting not only the efficient use of energy but also directly increasing production speed. Designing a spring to work optimally as expected is a complex problem. SpringJ aims to solve this problem!
 
 <div align="center">

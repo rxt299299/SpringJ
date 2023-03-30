@@ -40,6 +40,10 @@ SpringJ offers users the **Flexibility** to design various optimization types.
 - Based on the general spring optimization scenario, which satisfies the low-dimensional nature, SpringJ is very efficient and precise.
 - SpringJ's flexibility is difficult to replace with other products or algorithms.
 
+# Demo
+[![Alt text](https://img.youtube.com/vi/-ceRvjjrGYE&t=9s/0.jpg)](https://www.youtube.com/watch?v=-ceRvjjrGYE&t=9s)
+
+
 
 # How to USE
 SpringJ is currently deployed on Streamlit Cloud. If you would like access, please send an email to rxt299299@gmail.com to request access!

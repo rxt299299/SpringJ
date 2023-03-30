@@ -50,7 +50,7 @@ SpringJ offers users the **Flexibility** to design various optimization types.
 - SpringJ's flexibility is difficult to replace with other tools or algorithms.
 
 # Demo
-[![](https://i.ytimg.com/vi/-ceRvjjrGYE/maxresdefault.jpg)](https://www.youtube.com/watch?v=-ceRvjjrGYE&t=9s "")
+[![](https://i.ytimg.com/vi/-ceRvjjrGYE/maxresdefault.jpg)](https://www.youtube.com/watch?v=-ceRvjjrGYE&t=0s "")
 
 
 # How to USE
